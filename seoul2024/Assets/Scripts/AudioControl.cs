@@ -34,6 +34,16 @@ public class AudioControl : MonoBehaviour
         GameObject.Find("sfx_click").GetComponent<AudioSource>().Play();
     }
 
+    public void PlayChoiceButtonSfx()
+    {
+        if (GameObject.Find("sfx_choice").GetComponent<AudioSource>().isPlaying == true)
+        {
+            GameObject.Find("sfx_choice").GetComponent<AudioSource>().Stop();
+        }
+
+        GameObject.Find("sfx_choice").GetComponent<AudioSource>().Play();
+    }
+
     public void PlayBgm()
     {
         if (

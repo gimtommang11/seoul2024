@@ -35,6 +35,15 @@ public class FadeController : MonoBehaviour // Panel 불투명도 조절해 페�
         Debug.Log("FadeCanvasController_ Fade Out 끝");
     }
 
+
+    public void FadeIn()
+    {
+        panel.SetActive(true); // Panel 활성화
+        Debug.Log("FadeCanvasController_  CoFadeIn 시작");
+        StartCoroutine(CoFadeIn());
+        Debug.Log("FadeCanvasController_  CoFadeIn 끝");
+    }
+
     IEnumerator CoFadeIn()
     {
         float elapsedTime = 0f; // 누적 경과 시간
